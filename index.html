@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="wrapper">
+        <header>Weather App</header>
+        
+        <!-- Search Section -->
+        <section class="search-container">
+            <input type="text" id="searchInput" placeholder="Enter city name" autocomplete="off">
+            <button id="searchButton"><i class="fas fa-search"></i></button>
+            <button id="locationButton" title="Get Current Location"><i class="fas fa-map-marker-alt"></i></button>
+            <div class="separator"></div>
+        </section>
+
+        <!-- Error Message Box -->
+        <div class="error-box">
+            <i class="fas fa-exclamation-circle"></i>
+            <p class="error-message">Please enter a valid city name</p>
+        </div>
+        
+        <!-- Weather Info Section -->
+        <section class="weather-container">
+            <div class="weather-header">
+                <i class="fas fa-cloud-sun weather-icon"></i>
+                <div class="location-info">
+                    <h2 class="city-name">New York, US</h2>
+                    <span class="date-time">Monday, May 13, 2025 | Local time: 10:30 AM</span>
+                </div>
+            </div>
+            
+            <div class="current-weather">
+                <div class="temperature-container">
+                    <h1 class="temperature">24°C</h1>
+                    <div class="units-toggle">
+                        <span class="celsius active">°C</span>
+                        <span class="separator">|</span>
+                        <span class="fahrenheit">°F</span>
+                    </div>
+                </div>
+                
+                <div class="weather-details">
+                    <div class="weather-description">Partly Cloudy</div>
+                    <div class="feels-like">Feels like: <span>26°C</span></div>
+                </div>
+            </div>
+            
+            <div class="additional-info">
+                <div class="info-item">
+                    <i class="fas fa-wind"></i>
+                    <div>
+                        <p class="info-label">Wind</p>
+                        <p class="wind-speed">12 km/h</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-tint"></i>
+                    <div>
+                        <p class="info-label">Humidity</p>
+                        <p class="humidity">65%</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-eye"></i>
+                    <div>
+                        <p class="info-label">Visibility</p>
+                        <p class="visibility">10 km</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-compress-arrows-alt"></i>
+                    <div>
+                        <p class="info-label">Pressure</p>
+                        <p class="pressure">1012 hPa</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Forecast Section -->
+        <section class="forecast-container">
+            <h3 class="forecast-title">5-Day Forecast</h3>
+            <div class="forecast-items">
+                <div class="forecast-item">
+                    <p class="forecast-day">Tuesday</p>
+                    <i class="fas fa-cloud-sun forecast-icon"></i>
+                    <p class="forecast-temp">
+                        <span class="max-temp">26°</span>
+                        <span class="min-temp">18°</span>
+                    </p>
+                </div>
+                <div class="forecast-item">
+                    <p class="forecast-day">Wednesday</p>
+                    <i class="fas fa-cloud forecast-icon"></i>
+                    <p class="forecast-temp">
+                        <span class="max-temp">24°</span>
+                        <span class="min-temp">17°</span>
+                    </p>
+                </div>
+                <div class="forecast-item">
+                    <p class="forecast-day">Thursday</p>
+                    <i class="fas fa-cloud-showers-heavy forecast-icon"></i>
+                    <p class="forecast-temp">
+                        <span class="max-temp">22°</span>
+                        <span class="min-temp">16°</span>
+                    </p>
+                </div>
+                <div class="forecast-item">
+                    <p class="forecast-day">Friday</p>
+                    <i class="fas fa-cloud-rain forecast-icon"></i>
+                    <p class="forecast-temp">
+                        <span class="max-temp">20°</span>
+                        <span class="min-temp">15°</span>
+                    </p>
+                </div>
+                <div class="forecast-item">
+                    <p class="forecast-day">Saturday</p>
+                    <i class="fas fa-sun forecast-icon"></i>
+                    <p class="forecast-temp">
+                        <span class="max-temp">23°</span>
+                        <span class="min-temp">16°</span>
+                    </p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Hourly Forecast Section -->
+        <section class="hourly-forecast-container">
+            <h3 class="hourly-forecast-title">Hourly Forecast</h3>
+            <div class="hourly-forecast-items">
+                <div class="hourly-forecast-item">
+                    <p class="forecast-hour">11 AM</p>
+                    <i class="fas fa-cloud-sun forecast-icon"></i>
+                    <p class="hourly-temp">25°</p>
+                </div>
+                <div class="hourly-forecast-item">
+                    <p class="forecast-hour">12 PM</p>
+                    <i class="fas fa-cloud-sun forecast-icon"></i>
+                    <p class="hourly-temp">26°</p>
+                </div>
+                <div class="hourly-forecast-item">
+                    <p class="forecast-hour">1 PM</p>
+                    <i class="fas fa-cloud forecast-icon"></i>
+                    <p class="hourly-temp">26°</p>
+                </div>
+                <div class="hourly-forecast-item">
+                    <p class="forecast-hour">2 PM</p>
+                    <i class="fas fa-cloud forecast-icon"></i>
+                    <p class="hourly-temp">25°</p>
+                </div>
+                <div class="hourly-forecast-item">
+                    <p class="forecast-hour">3 PM</p>
+                    <i class="fas fa-cloud forecast-icon"></i>
+                    <p class="hourly-temp">24°</p>
+                </div>
+                <div class="hourly-forecast-item">
+                    <p class="forecast-hour">4 PM</p>
+                    <i class="fas fa-cloud-sun forecast-icon"></i>
+                    <p class="hourly-temp">24°</p>
+                </div>
+                <div class="hourly-forecast-item">
+                    <p class="forecast-hour">5 PM</p>
+                    <i class="fas fa-cloud-sun forecast-icon"></i>
+                    <p class="hourly-temp">23°</p>
+                </div>
+                <div class="hourly-forecast-item">
+                    <p class="forecast-hour">6 PM</p>
+                    <i class="fas fa-cloud-sun forecast-icon"></i>
+                    <p class="hourly-temp">22°</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Air Quality Section -->
+        <section class="air-quality-container">
+            <h3 class="air-quality-title">Air Quality</h3>
+            <div class="air-quality-info">
+                <div class="air-quality-index">
+                    <span class="aqi-value">42</span>
+                    <span class="aqi-label">AQI</span>
+                </div>
+                <div class="air-quality-status">Good</div>
+            </div>
+            <div class="air-quality-details">
+                <div class="air-quality-item">
+                    <p class="pollutant-name">PM2.5</p>
+                    <p class="pollutant-value">12.5 µg/m³</p>
+                </div>
+                <div class="air-quality-item">
+                    <p class="pollutant-name">PM10</p>
+                    <p class="pollutant-value">24.8 µg/m³</p>
+                </div>
+                <div class="air-quality-item">
+                    <p class="pollutant-name">O3</p>
+                    <p class="pollutant-value">68 µg/m³</p>
+                </div>
+                <div class="air-quality-item">
+                    <p class="pollutant-name">NO2</p>
+                    <p class="pollutant-value">15 µg/m³</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Weather Map Section -->
+        <section class="weather-map-container">
+            <h3 class="map-title">Weather Map</h3>
+            <div id="weather-map"></div>
+            <div class="map-controls">
+                <button class="map-control" data-layer="temp">Temperature</button>
+                <button class="map-control" data-layer="clouds">Clouds</button>
+                <button class="map-control" data-layer="precipitation">Precipitation</button>
+                <button class="map-control" data-layer="wind">Wind</button>
+            </div>
+        </section>
+        
+        <!-- Recent Searches -->
+        <section class="recent-searches-container">
+            <h3 class="recent-searches-title">Recent Searches</h3>
+            <div class="recent-searches-list">
+                <div class="recent-search-item">New York, US</div>
+                <div class="recent-search-item">London, GB</div>
+                <div class="recent-search-item">Tokyo, JP</div>
+                <div class="recent-search-item">Paris, FR</div>
+                <div class="recent-search-item">Sydney, AU</div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Settings Modal -->
+    <div class="settings-modal">
+        <div class="settings-content">
+            <div class="settings-header">
+                <h3>Settings</h3>
+                <button class="close-settings">&times;</button>
+            </div>
+            <div class="settings-body">
+                <div class="settings-section">
+                    <h4>Units</h4>
+                    <div class="settings-option">
+                        <label>
+                            <input type="radio" name="units" value="metric" checked> Metric (°C, km/h)
+                        </label>
+                    </div>
+                    <div class="settings-option">
+                        <label>
+                            <input type="radio" name="units" value="imperial"> Imperial (°F, mph)
+                        </label>
+                    </div>
+                </div>
+                <div class="settings-section">
+                    <h4>Theme</h4>
+                    <div class="settings-option">
+                        <label>
+                            <input type="radio" name="theme" value="light" checked> Light
+                        </label>
+                    </div>
+                    <div class="settings-option">
+                        <label>
+                            <input type="radio" name="theme" value="dark"> Dark
+                        </label>
+                    </div>
+                    <div class="settings-option">
+                        <label>
+                            <input type="radio" name="theme" value="auto"> Auto (System)
+                        </label>
+                    </div>
+                </div>
+                <div class="settings-section">
+                    <h4>Notifications</h4>
+                    <div class="settings-option">
+                        <label>
+                            <input type="checkbox" name="notify-severe"> Severe Weather Alerts
+                        </label>
+                    </div>
+                    <div class="settings-option">
+                        <label>
+                            <input type="checkbox" name="notify-daily"> Daily Forecast
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="settings-footer">
+                <button class="save-settings">Save Changes</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Button to open settings -->
+    <button class="settings-button">
+        <i class="fas fa-cog"></i>
+    </button>
+
+    <!-- Loading Spinner -->
+    <div class="loading-spinner">
+        <div class="spinner"></div>
+        <p>Loading weather data...</p>
+    </div>
+
+    <!-- Scripts -->
+    <script src="app.js"></script>
+</body>
+</html>
